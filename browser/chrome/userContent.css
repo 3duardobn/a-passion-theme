@@ -1,0 +1,8 @@
+/* ==========================================================================
+   A PASSION — new tab
+   newtab.css defines the layout; ntp-data.css carries the artwork embedded
+   as a data: URL (the new tab CSP blocks file://).
+   ========================================================================== */
+
+@import url("a-passion/newtab.css");
+@import url("a-passion/ntp-data.css");

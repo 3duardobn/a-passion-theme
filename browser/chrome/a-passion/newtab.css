@@ -1,0 +1,31 @@
+/* ==========================================================================
+   A PASSION — new tab
+   Shows the whole original artwork (1920x1080), anchored to the left.
+   The image lives in ntp-data.css, embedded as a data: URL because the new
+   tab CSP blocks file:// (it allows https:, data:, blob: and chrome:).
+   ========================================================================== */
+
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home"), url-prefix("resource://newtab/") {
+  :root {
+    color-scheme: dark !important;
+
+    --newtab-background-color: #1a1a51 !important;
+    --newtab-text-primary-color: #ffffff !important;
+    --newtab-background-color-secondary: #12123a !important;
+    --newtab-primary-action-background: #323fa6 !important;
+  }
+
+  body {
+    background-color: #1a1a51 !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: left center !important;
+    background-attachment: fixed !important;
+  }
+
+  /* For the Chrome framing (image at natural size, cropped at the edges
+     instead of scaled down), replace the two lines above with:
+       background-size: auto !important;
+       background-position: left center !important;
+  */
+}

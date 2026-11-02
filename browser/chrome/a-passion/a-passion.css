@@ -1,0 +1,283 @@
+/* ==========================================================================
+   A PASSION — theme for Firefox-based browsers
+   Port of the "A Passion" theme by Abelle Hayford (Chrome Web Store).
+
+   Original manifest colors:
+     frame   #1a1a51   (frame / tab strip)
+     toolbar #323fa6   (toolbar)
+     text    #ffffff
+
+   The original artwork (a_passion_1920x1080.png) is in ntp.png and is used
+   on the new tab page by newtab.css. This file only styles the browser
+   chrome.
+   ========================================================================== */
+
+:root {
+  /* ---- palette --------------------------------------------------------- */
+  --ap-navy: #1a1a51;
+  --ap-navy-deep: #12123a;
+  --ap-navy-soft: #24245f;
+  --ap-blue: #323fa6;
+  --ap-blue-light: #4653df;
+  --ap-teal: #4cb3af;
+  --ap-sky: #68d3ef;
+  --ap-indigo: #4653df;
+  --ap-pink: #de6af0;
+
+  /* ---- frame / tabs ---------------------------------------------------- */
+  --lwt-accent-color: var(--ap-navy) !important;
+  --lwt-accent-color-inactive: #161642 !important;
+  --lwt-text-color: #ffffff !important;
+  --lwt-tab-text: #ffffff !important;
+
+  --tab-selected-bgcolor: var(--ap-blue) !important;
+  --tab-selected-textcolor: #ffffff !important;
+  --tab-selected-outline-color: transparent !important;
+  --tab-hover-background-color: rgba(255, 255, 255, 0.1) !important;
+  --tab-border-radius: 8px !important;
+  --lwt-tab-line-color: transparent !important;
+  --tab-loading-fill: var(--ap-sky) !important;
+  --lwt-background-tab-separator-color: rgba(255, 255, 255, 0.12) !important;
+
+  /* ---- toolbar --------------------------------------------------------- */
+  --toolbar-bgcolor: var(--ap-blue) !important;
+  --toolbar-color: #ffffff !important;
+  --chrome-content-separator-color: var(--ap-navy) !important;
+
+  --lwt-toolbarbutton-icon-fill: #ffffff !important;
+  --lwt-toolbarbutton-icon-fill-attention: var(--ap-sky) !important;
+  --lwt-toolbarbutton-hover-background: rgba(255, 255, 255, 0.14) !important;
+  --lwt-toolbarbutton-active-background: rgba(255, 255, 255, 0.24) !important;
+  --toolbarbutton-hover-background: rgba(255, 255, 255, 0.14) !important;
+  --toolbarbutton-active-background: rgba(255, 255, 255, 0.24) !important;
+
+  /* ---- address bar ----------------------------------------------------- */
+  --toolbar-field-background-color: var(--ap-navy-deep) !important;
+  --toolbar-field-color: #ffffff !important;
+  --toolbar-field-border-color: rgba(255, 255, 255, 0.22) !important;
+  --toolbar-field-focus-background-color: #0d0d2b !important;
+  --toolbar-field-focus-color: #ffffff !important;
+  --toolbar-field-focus-border-color: var(--ap-indigo) !important;
+  --toolbar-field-highlight: var(--ap-indigo) !important;
+  --toolbar-field-highlight-text: #ffffff !important;
+
+  --urlbarView-highlight-background: var(--ap-blue) !important;
+  --urlbarView-highlight-color: #ffffff !important;
+  --urlbarView-hover-background: rgba(255, 255, 255, 0.08) !important;
+
+  /* ---- sidebar --------------------------------------------------------- */
+  --lwt-sidebar-background-color: var(--ap-navy) !important;
+  --lwt-sidebar-text-color: #ffffff !important;
+  --sidebar-background-color: var(--ap-navy) !important;
+  --sidebar-text-color: #ffffff !important;
+  --sidebar-border-color: rgba(255, 255, 255, 0.12) !important;
+
+  /* ---- panels / menus -------------------------------------------------- */
+  --arrowpanel-background: var(--ap-navy-deep) !important;
+  --arrowpanel-color: #ffffff !important;
+  --arrowpanel-border-color: var(--ap-blue) !important;
+
+  --button-background-color-hover: rgba(255, 255, 255, 0.14) !important;
+  --button-background-color-active: rgba(255, 255, 255, 0.24) !important;
+
+  --menu-background-color: var(--ap-navy-deep) !important;
+  --menu-color: #ffffff !important;
+  --menu-border-color: var(--ap-blue) !important;
+  --menuitem-hover-background-color: var(--ap-blue) !important;
+  --menuitem-hover-color: #ffffff !important;
+  --menu-disabled-color: rgba(255, 255, 255, 0.45) !important;
+
+  /* ---- new tab --------------------------------------------------------- */
+  --newtab-background-color: var(--ap-navy) !important;
+  --newtab-text-primary-color: #ffffff !important;
+  --newtab-background-color-secondary: var(--ap-navy-deep) !important;
+  --newtab-primary-action-background: var(--ap-blue) !important;
+
+  scrollbar-color: var(--ap-blue) var(--ap-navy);
+}
+
+/* ==========================================================================
+   Browser structure
+   ========================================================================== */
+
+#titlebar,
+#navigator-toolbox {
+  background-color: var(--ap-navy) !important;
+  background-image: none !important;
+}
+
+#nav-bar {
+  background-color: var(--ap-blue) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+#PersonalToolbar {
+  background-color: var(--ap-blue) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+#PersonalToolbar .bookmark-item {
+  color: #ffffff !important;
+}
+
+#PersonalToolbar .bookmark-item:hover {
+  background-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+/* Sidebar / vertical tabs */
+#sidebar-main,
+sidebar-main,
+#sidebar-box,
+#sidebar,
+.sidebar-panel {
+  background-color: var(--ap-navy) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+#sidebar-splitter {
+  background-color: var(--ap-navy) !important;
+  border-color: var(--ap-navy) !important;
+}
+
+#sidebar-header,
+#sidebar-panel-header {
+  color: #ffffff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ==========================================================================
+   Tabs
+   ========================================================================== */
+
+.tabbrowser-tab {
+  color: #ffffff !important;
+}
+
+.tabbrowser-tab .tab-background {
+  border-radius: 8px !important;
+}
+
+.tabbrowser-tab[selected] .tab-background {
+  background-color: var(--ap-blue) !important;
+  background-image: none !important;
+}
+
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab:not([selected]):hover .tab-background {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.tabbrowser-tab[selected] .tab-label {
+  color: #ffffff !important;
+}
+
+/* Close button */
+.tab-close-button:hover {
+  background-color: var(--ap-pink) !important;
+  fill: var(--ap-navy-deep) !important;
+  border-radius: 50% !important;
+}
+
+/* ==========================================================================
+   Address bar
+   ========================================================================== */
+
+#urlbar-background,
+#searchbar {
+  background-color: var(--toolbar-field-background-color) !important;
+  background-image: none !important;
+  border: 1px solid var(--toolbar-field-border-color) !important;
+}
+
+#urlbar:is([focused], [open]) > #urlbar-background {
+  border-color: var(--ap-indigo) !important;
+  box-shadow: 0 0 0 1px var(--ap-indigo) !important;
+}
+
+#urlbar-input,
+#searchbar input {
+  color: #ffffff !important;
+}
+
+#urlbar-input::placeholder,
+#searchbar input::placeholder {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* ==========================================================================
+   Menus, panels and findbar
+   ========================================================================== */
+
+menupopup {
+  --menu-background-color: var(--ap-navy-deep) !important;
+  --menu-color: #ffffff !important;
+  --menu-border-color: var(--ap-blue) !important;
+  --menuitem-hover-background-color: var(--ap-blue) !important;
+  --menuitem-hover-color: #ffffff !important;
+}
+
+menupopup,
+panel {
+  background-color: var(--ap-navy-deep) !important;
+  color: #ffffff !important;
+}
+
+findbar {
+  background-color: var(--ap-navy-deep) !important;
+  color: #ffffff !important;
+  border-top: 1px solid var(--ap-blue) !important;
+}
+
+findbar .findbar-textbox {
+  background-color: var(--ap-navy) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+/* ==========================================================================
+   Window
+   ========================================================================== */
+
+#browser,
+#appcontent,
+#tabbrowser-tabbox {
+  background-color: var(--ap-navy) !important;
+}
+
+.titlebar-button {
+  color: #ffffff !important;
+}
+
+.titlebar-button > .toolbarbutton-icon {
+  fill: #ffffff !important;
+}
+
+.titlebar-button:hover {
+  background-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+/* ==========================================================================
+   Chrome-faithful variant: light address bar.
+   Uncomment the block below for a white omnibox.
+
+:root {
+  --toolbar-field-background-color: #ffffff !important;
+  --toolbar-field-color: var(--ap-navy) !important;
+  --toolbar-field-focus-background-color: #ffffff !important;
+  --toolbar-field-focus-color: var(--ap-navy) !important;
+  --toolbar-field-border-color: rgba(26, 26, 81, 0.22) !important;
+}
+
+#urlbar-input,
+#searchbar input {
+  color: var(--ap-navy) !important;
+}
+
+#urlbar-input::placeholder,
+#searchbar input::placeholder {
+  color: rgba(26, 26, 81, 0.55) !important;
+}
+   ========================================================================== */

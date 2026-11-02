@@ -1,0 +1,168 @@
+/* ==========================================================================
+   A PASSION — Sidebery theme
+   Matches the theme of the same name for Firefox-based browsers.
+
+   Main colors:
+     frame / panel ........... #1a1a51
+     active tab / highlight .. #323fa6
+     text .................... #ffffff
+     accent (pink) ........... #de6af0
+     focus / search .......... #68d3ef
+
+   How to use:
+     Sidebery → Settings → Styles → Styles editor
+     Paste this whole file (replacing the current content) and save.
+     No browser restart needed.
+   ========================================================================== */
+
+#root {
+  color-scheme: dark !important;
+
+  /* ---- palette --------------------------------------------------------- */
+  --ap-navy: #1a1a51;
+  --ap-navy-deep: #12123a;
+  --ap-navy-soft: #24245f;
+  --ap-blue: #323fa6;
+  --ap-blue-light: #4653df;
+  --ap-pink: #de6af0;
+  --ap-pink-soft: #e78ab8;
+  --ap-sky: #68d3ef;
+  --ap-teal: #4cb3af;
+  --ap-white: #ffffff;
+  --ap-text: rgba(255, 255, 255, 0.84);
+  --ap-text-dim: rgba(255, 255, 255, 0.64);
+  --ap-line: rgba(255, 255, 255, 0.12);
+  --ap-line-strong: rgba(255, 255, 255, 0.18);
+  --ap-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+
+  /* ---- Sidebery base variables ---------------------------------------- */
+  --s-frame-bg: var(--ap-navy) !important;
+  --s-frame-fg: var(--ap-white) !important;
+  --s-toolbar-bg: var(--ap-navy) !important;
+  --s-toolbar-fg: var(--ap-white) !important;
+  --s-toolbar-border: transparent !important;
+  --s-act-el-bg: var(--ap-blue) !important;
+  --s-act-el-fg: var(--ap-white) !important;
+  --s-act-el-border: rgba(255, 255, 255, 0.1) !important;
+  --s-accent: var(--ap-pink) !important;
+  --s-popup-bg: var(--ap-navy-deep) !important;
+  --s-popup-fg: var(--ap-white) !important;
+  --s-popup-border: var(--ap-line) !important;
+
+  /* ---- frame / panel --------------------------------------------------- */
+  --frame-bg: var(--ap-navy) !important;
+  --frame-fg: var(--ap-white) !important;
+  --frame-el-bg: var(--ap-navy-soft) !important;
+  --frame-el-fg: var(--ap-white) !important;
+  --frame-el-shadow: none !important;
+  --frame-el-overlay-hover-bg: rgba(255, 255, 255, 0.08) !important;
+  --frame-el-overlay-clicked-bg: rgba(255, 255, 255, 0.14) !important;
+  --frame-el-overlay-selected-bg: rgba(222, 106, 240, 0.16) !important;
+  --frame-el-overlay-selected-border: var(--ap-pink) !important;
+  --frame-scrollbar-color: rgba(255, 255, 255, 0.26) !important;
+
+  /* ---- toolbar / navigation ------------------------------------------- */
+  --toolbar-bg: var(--ap-navy) !important;
+  --toolbar-fg: var(--ap-white) !important;
+  --toolbar-el-overlay-hover-bg: rgba(255, 255, 255, 0.08) !important;
+  --toolbar-el-overlay-clicked-bg: rgba(255, 255, 255, 0.14) !important;
+  --toolbar-el-overlay-active-bg: rgba(255, 255, 255, 0.14) !important;
+  --toolbar-el-overlay-selected-bg: rgba(222, 106, 240, 0.16) !important;
+  --toolbar-el-overlay-selected-border: var(--ap-pink) !important;
+  --toolbar-scrollbar-color: rgba(255, 255, 255, 0.26) !important;
+  --border: var(--ap-line) !important;
+
+  /* ---- active element -------------------------------------------------- */
+  --active-el-bg: var(--ap-blue) !important;
+  --active-el-fg: var(--ap-white) !important;
+  --active-el-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+  --active-el-overlay-hover-bg: rgba(255, 255, 255, 0.1) !important;
+  --active-el-overlay-clicked-bg: rgba(255, 255, 255, 0.18) !important;
+
+  /* ---- popups / menus -------------------------------------------------- */
+  --popup-bg: var(--ap-navy-deep) !important;
+  --popup-fg: var(--ap-white) !important;
+  --popup-shadow: 0 0 0 1px var(--ap-line), var(--ap-shadow) !important;
+  --popup-scrollbar-color: rgba(255, 255, 255, 0.26) !important;
+
+  --ctx-menu-bg: var(--ap-navy-deep) !important;
+  --ctx-menu-fg: var(--ap-white) !important;
+  --ctx-menu-separator: var(--ap-line) !important;
+  --ctx-menu-shadow: 0 0 0 1px var(--ap-line), var(--ap-shadow) !important;
+
+  /* ---- tabs ------------------------------------------------------------ */
+  --tabs-border-radius: 8px !important;
+  --tabs-normal-bg: transparent !important;
+  --tabs-normal-fg: var(--ap-text) !important;
+  --tabs-activated-bg: var(--ap-blue) !important;
+  --tabs-activated-fg: var(--ap-white) !important;
+  --tabs-activated-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+  --tabs-progress-bg: rgba(255, 255, 255, 0.1) !important;
+  --tabs-lvl-opacity: 0.16 !important;
+
+  /* ---- badges / status ------------------------------------------------- */
+  --badge-bg: var(--ap-pink) !important;
+  --badge-fg: var(--ap-navy-deep) !important;
+  --badge-urgent-bg: #ff5c8a !important;
+  --badge-urgent-fg: var(--ap-navy-deep) !important;
+  --status-ok: #64df64 !important;
+  --status-err: #ff5c8a !important;
+  --status-active: var(--ap-sky) !important;
+  --status-notice: var(--ap-pink) !important;
+  --accent: var(--ap-pink) !important;
+
+  /* ---- components ------------------------------------------------------ */
+  --general-border-radius: 8px !important;
+  --nav-btn-accent: var(--ap-pink) !important;
+  --search-border-radius: 8px !important;
+  --search-shadow: 0 0 0 1px var(--ap-line) !important;
+  --bookmarks-node-activated-fg: var(--ap-white) !important;
+}
+
+/* ==========================================================================
+   Fine-tuning
+   ========================================================================== */
+
+/* Active tab: Chrome's blue with a subtle highlight at the top. */
+.Tab[data-active="true"] > .body {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0) 55%
+  ) !important;
+}
+
+.Tab[data-active="true"] .title {
+  font-weight: 600 !important;
+}
+
+/* Pinned tabs stay visible as small cards. */
+.Tab[data-pin="true"]:not([data-active="true"]) > .body {
+  background-color: var(--ap-navy-soft) !important;
+}
+
+/* Search bar: darker background, like the address bar. */
+.SearchBar:before {
+  background-color: var(--ap-navy-deep) !important;
+  box-shadow: inset 0 0 0 1px var(--ap-line) !important;
+}
+
+.SearchBar[data-focused="true"]:before {
+  box-shadow: inset 0 0 0 1px var(--ap-sky) !important;
+}
+
+/* Footer buttons and the new tab button: slightly lighter than the frame. */
+.Sidebar .tool-btn,
+.TabsPanel .new-tab-btn {
+  background-color: var(--ap-navy-soft) !important;
+  box-shadow: inset 0 0 0 1px var(--ap-line) !important;
+}
+
+/* Context menu: soft pink hover instead of pure white. */
+.CtxMenu .opt:not([data-inactive="true"]):hover:before,
+.CtxMenu .opt[data-selected="true"]:not([data-inactive="true"]):before,
+.CtxMenu .icon-opt:not([data-inactive="true"]):hover:before,
+.CtxMenu .icon-opt[data-selected="true"]:not([data-inactive="true"]):before {
+  background-color: var(--ap-pink) !important;
+  opacity: 0.22 !important;
+}
